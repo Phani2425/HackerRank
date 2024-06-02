@@ -6,6 +6,7 @@ Padding:0;
 Box-sizing: border-box;
 Font-family: 'Open Sans','Sans Serif';
 transition: all 0.2s;
+scroll-behavior: smooth;
 }
 
 html,body{
@@ -168,4 +169,335 @@ a:hover{
     }
 }
 
+.hero-wrapper:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    display: block;
+    background: #6E6BFE;
+    border-radius: 50%;
+    box-shadow: 0 0 1000px 350px #6E6BFE;
+    z-index: -1;
+    right: 0;
+    top: 100%;
+    transform: translate(-80%, -80%);
+    opacity: .2;
+}
+.hero-wrapper:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    display: block;
+    background: #1BA94C;
+    border-radius: 50%;
+    box-shadow: 0 0 1000px 350px #1BA94C;
+    z-index: -1;
+    left: 0;
+    top: 100%;
+    transform: translate(80%, -80%);
+    opacity: .2;
+}
+.hero-wrapper{
+    padding-top: 160px;
+}
+
+.hero{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    
+}
+.hero-company{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.hero-company img{
+    height: 60px;
+}
+.hero-heading{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    text-align: center;
+}
+.hero-para{
+    color: rgb(44, 43, 43);
+    font-size: medium;
+    line-height: 1.8rem;
+    text-align: center;
+}
+.hero-para-2{
+    color: rgb(89, 88, 88);
+    font-size: small;
+    line-height: 1.8rem;
+    text-align: center;
+}
+.hero-button{
+    display: flex;
+    gap: 20px;
+}
+.hero-but-1{
+    padding: 12px 54px;
+    color: white;
+    background-color: #068932;
+    font-size: small;
+    font-weight: 700;
+    border: 1px solid #068932;
+    border-radius: 5px;
+}
+.hero-but-2{
+    padding: 12px 34px;
+    color: black;
+    background-color: white;
+    font-size: small;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+@media screen and (min-width:1000px) {
+    .hero-heading{
+        font-size: 5rem;
+        font-weight: 700;
+        width: 800px;
+        line-height: 6rem;
+    }
+    .hero-para{
+        font-size: large;
+        line-height: 2rem;
+        text-align: center;
+        width: 600px;
+    }
+}
+@media screen and (max-width:460px) {
+    .hero-button{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+    .hero-but-1,.hero-but-2{
+        width: 100%;
+    }
+}
+.feature{
+    background-color: #f7fcff;
+    margin-top: 30px;
+    padding: 56px 0px 36px;
+    display: flex;
+    flex-direction: column;
+}
+.hiring-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin-inline: auto;
+    gap: 40px;
+}
+.hiring-title{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 3rem;
+}
+
+.hiring-title span{
+    color:#1BA94C;
+}
+.hiring-text{
+    font-size: 18px;
+    color: #576871;
+    line-height: 2rem;
+}
+@media screen and (min-width:1000px) {
+    .hiring-title{
+        font-size: 3.5rem;
+        line-height: 5.5rem;
+        font-weight: 600;
+    }
+    .hiring-title span{
+        color:#1BA94C;
+    }
+    .hiring-text{
+        font-size: 24px;
+        color: #576871;
+        line-height: 2.5rem;
+    }
+}
+.hiring-nav{
+    display: flex;
+    gap: 70px;
+    font-size: medium;
+
+}
+.hiring-nav a{
+    color: black;
+}
+.hiring-nav a:hover{
+    text-decoration: underline;
+}
+.preparation{
+    margin-top: 60px;
+    background-color:#0e141e ;
+    width: 90vw;
+    margin-inline: auto;
+    border-radius: 10px;
+    padding: 32px 16px;
+}
+.coding-practice{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    color: white;
+    gap: 40px;
+    max-width: 500px;
+}
+
+.coding-practice h2{
+    font-size: 24px;
+
+}
+.coding-practice span,p{
+    font-size: 18px;
+}
+.coding-practice button{
+    padding: 12px 34px;
+    color: white;
+    background-color: transparent;
+    font-size: small;
+    font-weight: 700;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+@media screen and (max-width:460px) {
+
+    .coding-practice button{
+        width: 100%;
+    }
+}
+.practice-img img{
+    width: 80vw;
+}
+@media screen and (min-width:1000px){
+    .coding-practice{
+        padding-block: 10px;
+    }
+    .preparation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        padding-inline: 90px;
+    }
+    .practice-img img{
+        width: 35vw;
+    }
+}
+.coding-test{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 90vw;
+    margin-inline: auto;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+.skill-txt{
+    font-size:20px;
+}
+.skill-para{
+    font-size: 24px;
+}
+@media screen and (min-width:1000px) {
+    .coding-test{
+        width: 70vw;
+        margin-inline: auto;
+    }
+    .skill-para{
+        font-size: 4.5rem;
+        line-height: 5.5rem;
+        font-weight: 600;
+    }
+}
+.skill-head-1{
+    color: #1BA94C;
+}
+.features-2{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.feature-two{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 60px;
+    width: 90vw;
+    margin-inline: auto;
+}
+.feature-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 40px;
+
+}
+.feature-head{
+    font-size: 24px;
+
+}
+.feature-para{
+    font-size: 18px;
+    color: #576871;
+    line-height: 2rem;
+    
+}
+.feature-trial{
+    color: black;
+}
+.feature-trial:hover i {
+   transform: translateX(5px);
+}
+
+.feature-two img{
+    width: 100%;
+}
+@media screen and (min-width:1000px) {
+    .feature-two{
+        flex-direction: row;
+        width: 72vw;
+        margin-inline: auto;
+    }
+    .feature-head{
+        font-size: 3rem;
+    }
+    .feature-para{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .feature-trial{
+        font-size: larger;
+    }
+    .feature-two img{
+        width: 55%;
+    }
+}
 
